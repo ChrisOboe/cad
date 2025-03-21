@@ -8,7 +8,7 @@ module clamp() {
   difference() {
     union() {
       // cylinder(h=20,d=46.7);
-      cyl(h = 20, d = 46.7, center = false, rounding = 4);
+      cyl(h = 20, d = 46.7, center = false, rounding = 2);
       // translate([0,0,10]) rotate([90,-90,0]) cube([20,65,8.7], true);
       translate([0, 0, 10])
         rotate([90, -90, 0])
