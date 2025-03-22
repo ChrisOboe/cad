@@ -2,94 +2,96 @@
 // Link: https://makerworld.com/en/models/704997
 // Copyright (c) 2024-2025. All rights reserved.
 
-// Enter measured size in mm, or, number of Gridfinity units x 42.
-Width = 358;
 
-// Enter measured size in mm, or, number of Gridfinity units x 42.
-Depth = 421;
-
-// Suggest 2mm where measurements don't already allow for clearance.
-Clearance = 0;
-
-Build_Plate_Size = 236; //[180: Small (A1 Mini), 236: Standard (X1/P1/A1), 350: Large (350mm)]
-
-// Include a half-width grid in the margin(s) if there is sufficient space.
-Half_Sized_Filler = false;
-
-// When disabled, a normal butt-together baseplate will be generated.
-Generate_Locking_Tabs = true;
-
-/* [Advanced] */
-
-// In mm. Use with caution as this will increase warping.
-Solid_Base_Thickness = 0;
-
-// Offset grid right or left in mm.
-Offset_Horizontal = 0;
-
-// Offset grid back or forward in mm.
-Offset_Vertical = 0;
-
-// Amount of extra rounding to apply to the corners. This value is limited based on the size of the margins.
-Extra_Corner_Rounding = 0;
-
-// Mirrors the baseplate left-to-right.
-Mirror = false;
-
-// Standard Gridfinity is 42 mm
-Base_Unit_Dimension = 42;
-
-// Useful for editing model before printing
-Show_Assembled = false;
-
-/* [Hidden] */
-
-// Calculate unit counts, margins and whether we have half strips.
-adjusted_width = Width - Clearance;
-adjusted_depth = Depth - Clearance;
-
-whole_units_wide = floor(adjusted_width / Base_Unit_Dimension);
-whole_units_deep = floor(adjusted_depth / Base_Unit_Dimension);
-
-have_vertical_half_strip = Half_Sized_Filler && (adjusted_width - whole_units_wide * Base_Unit_Dimension) >= Base_Unit_Dimension / 2;
-have_horizontal_half_strip = Half_Sized_Filler && (adjusted_depth - whole_units_deep * Base_Unit_Dimension) >= Base_Unit_Dimension / 2;
-units_wide = whole_units_wide + (have_vertical_half_strip ? 0.5 : 0);
-units_deep = whole_units_deep + (have_horizontal_half_strip ? 0.5 : 0);
-
-half_margin_h = (adjusted_width - units_wide * Base_Unit_Dimension) / 2;
-half_margin_v = (adjusted_depth - units_deep * Base_Unit_Dimension) / 2;
-clamped_offset_h = min(max(Offset_Horizontal, -half_margin_h), half_margin_h);
-clamped_offset_v = min(max(Offset_Vertical, -half_margin_v), half_margin_v);
-margin_left = half_margin_h + clamped_offset_h;
-margin_back = half_margin_v + clamped_offset_v;
-margin_right = half_margin_h - clamped_offset_h;
-margin_front = half_margin_v - clamped_offset_v;
-
-base_corner_radius = 4;
-max_extra_corner_radius = max(min(margin_left, margin_right), min(margin_front, margin_back));
-outer_corner_radius = base_corner_radius + max(0, min(Extra_Corner_Rounding, max_extra_corner_radius));
-
-fn_min = 20;
-fn_max = 40;
-function lerp(x, x0, x1, y0, y1) =
-  y0 + (x - x0) * (y1 - y0) / (x1 - x0);
-$fn = max(min(lerp(units_wide * units_deep, 200, 400, fn_max, fn_min), fn_max), fn_min);
-
-max_unit_dimension = max(units_wide, whole_units_wide, whole_units_deep);
-
-// Need to increase as the cutting tool intentionally extends deeper than necessary.
-extra_base_thickness = Solid_Base_Thickness > 0 ? Solid_Base_Thickness + 0.5 : 0;
-
-max_recursion_depth = 12;
-part_spacing = Show_Assembled ? 0 : 10;
-
-cut_overshoot = 0.1;
-min_corner_radius = 1;
-non_grips_edge_clearance = 0.25;
-grips_min_margin_for_full_tab = 2.75;
 
 
 module baseplate() {
+  // Enter measured size in mm, or, number of Gridfinity units x 42.
+  Width = 358;
+
+  // Enter measured size in mm, or, number of Gridfinity units x 42.
+  Depth = 421;
+
+  // Suggest 2mm where measurements don't already allow for clearance.
+  Clearance = 0;
+
+  Build_Plate_Size = 236; //[180: Small (A1 Mini), 236: Standard (X1/P1/A1), 350: Large (350mm)]
+
+  // Include a half-width grid in the margin(s) if there is sufficient space.
+  Half_Sized_Filler = false;
+
+  // When disabled, a normal butt-together baseplate will be generated.
+  Generate_Locking_Tabs = true;
+
+  /* [Advanced] */
+
+  // In mm. Use with caution as this will increase warping.
+  Solid_Base_Thickness = 0;
+
+  // Offset grid right or left in mm.
+  Offset_Horizontal = 0;
+
+  // Offset grid back or forward in mm.
+  Offset_Vertical = 0;
+
+  // Amount of extra rounding to apply to the corners. This value is limited based on the size of the margins.
+  Extra_Corner_Rounding = 0;
+
+  // Mirrors the baseplate left-to-right.
+  Mirror = false;
+
+  // Standard Gridfinity is 42 mm
+  Base_Unit_Dimension = 42;
+
+  // Useful for editing model before printing
+  Show_Assembled = false;
+
+  /* [Hidden] */
+
+  // Calculate unit counts, margins and whether we have half strips.
+  adjusted_width = Width - Clearance;
+  adjusted_depth = Depth - Clearance;
+
+  whole_units_wide = floor(adjusted_width / Base_Unit_Dimension);
+  whole_units_deep = floor(adjusted_depth / Base_Unit_Dimension);
+
+  have_vertical_half_strip = Half_Sized_Filler && (adjusted_width - whole_units_wide * Base_Unit_Dimension) >= Base_Unit_Dimension / 2;
+  have_horizontal_half_strip = Half_Sized_Filler && (adjusted_depth - whole_units_deep * Base_Unit_Dimension) >= Base_Unit_Dimension / 2;
+  units_wide = whole_units_wide + (have_vertical_half_strip ? 0.5 : 0);
+  units_deep = whole_units_deep + (have_horizontal_half_strip ? 0.5 : 0);
+
+  half_margin_h = (adjusted_width - units_wide * Base_Unit_Dimension) / 2;
+  half_margin_v = (adjusted_depth - units_deep * Base_Unit_Dimension) / 2;
+  clamped_offset_h = min(max(Offset_Horizontal, -half_margin_h), half_margin_h);
+  clamped_offset_v = min(max(Offset_Vertical, -half_margin_v), half_margin_v);
+  margin_left = half_margin_h + clamped_offset_h;
+  margin_back = half_margin_v + clamped_offset_v;
+  margin_right = half_margin_h - clamped_offset_h;
+  margin_front = half_margin_v - clamped_offset_v;
+
+  base_corner_radius = 4;
+  max_extra_corner_radius = max(min(margin_left, margin_right), min(margin_front, margin_back));
+  outer_corner_radius = base_corner_radius + max(0, min(Extra_Corner_Rounding, max_extra_corner_radius));
+
+  fn_min = 20;
+  fn_max = 40;
+  function lerp(x, x0, x1, y0, y1) =
+    y0 + (x - x0) * (y1 - y0) / (x1 - x0);
+  $fn = max(min(lerp(units_wide * units_deep, 200, 400, fn_max, fn_min), fn_max), fn_min);
+
+  max_unit_dimension = max(units_wide, whole_units_wide, whole_units_deep);
+
+  // Need to increase as the cutting tool intentionally extends deeper than necessary.
+  extra_base_thickness = Solid_Base_Thickness > 0 ? Solid_Base_Thickness + 0.5 : 0;
+
+  max_recursion_depth = 12;
+  part_spacing = Show_Assembled ? 0 : 10;
+
+  cut_overshoot = 0.1;
+  min_corner_radius = 1;
+  non_grips_edge_clearance = 0.25;
+  grips_min_margin_for_full_tab = 2.75;
+
   entry_point();
 }
 
