@@ -18,7 +18,7 @@ gridz = 2;
     translate([60, 70, 0])
       cylinder(d = 8, h = 1000, center = true);
 
-    cube([], true);
+    cube([0, 140, 1000], true);
 
   }
   gridfinityBase([gridx, gridy], hole_options = hole_options, only_corners = only_corners, thumbscrew = enable_thumbscrew);
