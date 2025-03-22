@@ -1,13 +1,14 @@
 // Author: https://makerworld.com/en/@TooManyThings
 // Link: https://makerworld.com/en/models/704997
 // Copyright (c) 2024-2025. All rights reserved.
+// Modified by ChrisOboe to provide module
 
 module baseplate(width, depth) {
   // Enter measured size in mm, or, number of Gridfinity units x 42.
-  Width = 358;
+  Width = width;
 
   // Enter measured size in mm, or, number of Gridfinity units x 42.
-  Depth = 421;
+  Depth = depth;
 
   // Suggest 2mm where measurements don't already allow for clearance.
   Clearance = 0;
