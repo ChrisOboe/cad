@@ -9,7 +9,8 @@ gridz = 2;
 
 {
   gridfinityInit(gridx, gridy, height(gridz, gridz_define, style_lip, enable_zsnap), height_internal, sl = style_lip) {
-    cylinder(r = 5, h = 1000, center = true);
+    translate([-60, 0, 0])
+      cylinder(d = 8, h = 1000, center = true);
   }
   gridfinityBase([gridx, gridy], hole_options = hole_options, only_corners = only_corners, thumbscrew = enable_thumbscrew);
 }
