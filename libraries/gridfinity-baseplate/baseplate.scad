@@ -3,6 +3,8 @@
 // Copyright (c) 2024-2025. All rights reserved.
 // Modified by ChrisOboe to provide module
 
+Width = 0;
+Depth = 0;
 
 // Suggest 2mm where measurements don't already allow for clearance.
 Clearance = 0;
@@ -84,13 +86,37 @@ min_corner_radius = 1;
 non_grips_edge_clearance = 0.25;
 grips_min_margin_for_full_tab = 2.75;
 
-module baseplate(width, depth) {
+module baseplate(Width, Depth) {
   // Enter measured size in mm, or, number of Gridfinity units x 42.
   Width = width;
 
   // Enter measured size in mm, or, number of Gridfinity units x 42.
   Depth = depth;
 
+
+  adjusted_width = Width - Clearance;
+  adjusted_depth = Depth - Clearance;
+
+  whole_units_wide = floor(adjusted_width / Base_Unit_Dimension);
+  whole_units_deep = floor(adjusted_depth / Base_Unit_Dimension);
+
+  have_vertical_half_strip = Half_Sized_Filler && (adjusted_width - whole_units_wide * Base_Unit_Dimension) >= Base_Unit_Dimension / 2;
+  have_horizontal_half_strip = Half_Sized_Filler && (adjusted_depth - whole_units_deep * Base_Unit_Dimension) >= Base_Unit_Dimension / 2;
+  units_wide = whole_units_wide + (have_vertical_half_strip ? 0.5 : 0);
+  units_deep = whole_units_deep + (have_horizontal_half_strip ? 0.5 : 0);
+
+  half_margin_h = (adjusted_width - units_wide * Base_Unit_Dimension) / 2;
+  half_margin_v = (adjusted_depth - units_deep * Base_Unit_Dimension) / 2;
+  clamped_offset_h = min(max(Offset_Horizontal, -half_margin_h), half_margin_h);
+  clamped_offset_v = min(max(Offset_Vertical, -half_margin_v), half_margin_v);
+  margin_left = half_margin_h + clamped_offset_h;
+  margin_back = half_margin_v + clamped_offset_v;
+  margin_right = half_margin_h - clamped_offset_h;
+  margin_front = half_margin_v - clamped_offset_v;
+
+  base_corner_radius = 4;
+  max_extra_corner_radius = max(min(margin_left, margin_right), min(margin_front, margin_back));
+  outer_corner_radius = base_corner_radius + max(0, min(Extra_Corner_Rounding, max_extra_corner_radius));
 
   entry_point();
 }
