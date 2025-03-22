@@ -12,7 +12,7 @@ gridz = 2;
     if (divx > 0 && divy > 0) {
     //cutEqual(n_divx = divx, n_divy = divy, style_tab = style_tab, scoop_weight = scoop, place_tab = place_tab);
     } else if (cdivx > 0 && cdivy > 0) {
-    //cutCylinders(n_divx = cdivx, n_divy = cdivy, cylinder_diameter = cd, cylinder_height = ch, coutout_depth = c_depth, orientation = c_orientation, chamfer = c_chamfer);
+      cutCylinders(n_divx = cdivx, n_divy = cdivy, cylinder_diameter = cd, cylinder_height = ch, coutout_depth = c_depth, orientation = c_orientation, chamfer = c_chamfer);
     }
   }
   gridfinityBase([gridx, gridy], hole_options = hole_options, only_corners = only_corners, thumbscrew = enable_thumbscrew);
