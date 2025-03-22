@@ -1,6 +1,6 @@
 include <../../libraries/gridfinity-baseplate/baseplate.scad>
 
 Width = 275;
-Depth = 304;
+Depth = 306;
 
 assembled_plates();
