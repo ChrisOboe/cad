@@ -15,6 +15,7 @@ gridz = 2;
     cut(1, 0, 2, 1, 5);
     cut(0, 0, 1, 2);
     cut(2, 1, 1, 2);
+    cylinder(r = 5, h = 1000, center = true);
   }
   gridfinityBase([gridx, gridy], hole_options = hole_options, only_corners = only_corners, thumbscrew = enable_thumbscrew);
 }
