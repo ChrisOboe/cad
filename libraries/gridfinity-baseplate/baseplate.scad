@@ -2,6 +2,7 @@
 // Link: https://makerworld.com/en/models/704997
 // Copyright (c) 2024-2025. All rights reserved.
 
+Width = 900;
 
 
 
