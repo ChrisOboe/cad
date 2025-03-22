@@ -88,9 +88,12 @@ min_corner_radius = 1;
 non_grips_edge_clearance = 0.25;
 grips_min_margin_for_full_tab = 2.75;
 
+
 module baseplate() {
   entry_point();
 }
+
+baseplate();
 
 module entry_point() {
   translate([-Base_Unit_Dimension * units_wide / 2, -Base_Unit_Dimension * units_deep / 2, 0])
