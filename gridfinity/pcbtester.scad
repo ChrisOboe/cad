@@ -1,11 +1,11 @@
 include <../libraries/gridfinity-rebuilt-openscad/gridfinity-rebuilt-bins.scad>
 
-enable_zsnap = true;
+enable_zsnap = false;
 refined_holes = false;
 
 gridx = 4;
 gridy = 4;
-gridz = 1;
+gridz = 2;
 
 {
   gridfinityInit(gridx, gridy, height(gridz, gridz_define, style_lip, enable_zsnap), height_internal, sl = style_lip) {
