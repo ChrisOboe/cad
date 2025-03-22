@@ -3,8 +3,6 @@
 // Copyright (c) 2024-2025. All rights reserved.
 // Modified by ChrisOboe to provide module
 
-Width = 0;
-Depth = 0;
 
 // Suggest 2mm where measurements don't already allow for clearance.
 Clearance = 0;
