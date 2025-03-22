@@ -2,7 +2,7 @@ include <../../libraries/multiboard-parametric/multiboard_parametric_extended.sc
 
 x_cells = 8;
 y_cells = 6;
-type = "side"; // side or corner
+type = "corner"; // side or corner
 
 
 multiboard();
