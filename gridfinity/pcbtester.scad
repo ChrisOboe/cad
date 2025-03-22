@@ -1,6 +1,7 @@
 include <../libraries/gridfinity-rebuilt-openscad/gridfinity-rebuilt-bins.scad>
 
 enable_zsnap = true;
+refined_holes = false;
 
 {
   gridfinityInit(gridx, gridy, height(gridz, gridz_define, style_lip, enable_zsnap), height_internal, sl = style_lip) {
