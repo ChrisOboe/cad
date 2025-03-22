@@ -2,11 +2,7 @@
 // Link: https://makerworld.com/en/models/704997
 // Copyright (c) 2024-2025. All rights reserved.
 
-Width = 900;
-
-
-
-module baseplate() {
+module baseplate(width, depth) {
   // Enter measured size in mm, or, number of Gridfinity units x 42.
   Width = 358;
 
@@ -95,8 +91,6 @@ module baseplate() {
 
   entry_point();
 }
-
-baseplate();
 
 module entry_point() {
   translate([-Base_Unit_Dimension * units_wide / 2, -Base_Unit_Dimension * units_deep / 2, 0])
