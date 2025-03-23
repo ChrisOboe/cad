@@ -17,7 +17,7 @@ module dispenser(can_height = 109, can_width = 75, depth = 410, angle = 5) {
     rotate([0, 0, angle])
       cube([2, depth - can_width, 20]);
 
-  cylinder(h = 2, d = can_width);
+  cylinder(h = 2, d = can_width + 2);
 
 }
 
