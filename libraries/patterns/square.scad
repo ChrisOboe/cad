@@ -8,7 +8,8 @@ module cube_square(dimensions = [0, 0, 0], density = 40, border = 2) {
 
   for(i = [0:density:dimensions.y]) {
     translate([0, i])
-      square([dimensions.x, 10]);
+      rotate([45, 0])
+        square([dimensions.x, 10]);
   }
 }
 
