@@ -14,7 +14,7 @@ module cube_square(dimensions = [0, 0, 0], density = 40, border = 2) {
           rotate([0, 0, 45])
             square([length, border]);
       }
-      for(i = [0:density:dimensions.y * 1.5]) {
+      for(i = [0:dimensions.y / density:dimensions.y * 1.5]) {
         translate([0, i])
           rotate([0, 0, -45])
             square([length, border]);
