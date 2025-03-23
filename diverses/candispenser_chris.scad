@@ -22,11 +22,11 @@ module dispenser(can_height = 109, can_width = 75, depth = 410, angle = 5, can_h
 
   translate([can_width + 2, 0, 0])
     rotate([0, 0, 180])
-      can_inversion(can_width, angle = 60, height = 20);
+      can_inversion(can_width, angle = 60, height = can_hold);
 
   translate([height + can_width + 2, depth - can_width - 2, 0])
     rotate([0, 0, 90])
-      can_inversion(can_width, height = 20);
+      can_inversion(can_width, height = can_hold);
 
 }
 
