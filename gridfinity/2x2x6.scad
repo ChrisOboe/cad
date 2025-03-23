@@ -1,6 +1,6 @@
 include <../libraries/gridfinity-rebuilt-openscad/gridfinity-rebuilt-bins.scad>
 
-enable_zsnap = false;
+enable_zsnap = true;
 refined_holes = false;
 
 gridx = 2;
