@@ -21,7 +21,7 @@ module cube_square(dimensions = [0, 0, 0], density = 40, border = 2) {
       }
     }
     #translate([0, -1000])
-      square([dimensions.x, 1000]);
+      square([1000, 1000]);
   }
 
 }
