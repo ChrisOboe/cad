@@ -23,7 +23,7 @@ module dispenser(can_height = 109, can_width = 75, depth = 410, angle = 5, can_h
 
   translate([can_width + line_width, 0, 0])
     rotate([0, 0, 180])
-      can_inversion(can_width, angle = 60, height = can_hold);
+      can_inversion(can_width, angle = 60, height = can_hold, width = line_width);
 
   translate([height + can_width + 2, depth - can_width - line_width, 0])
     rotate([0, 0, 90])
