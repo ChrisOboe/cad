@@ -14,7 +14,7 @@ with another set of supports.
 
 /* [Can Dimensions] */
 // Diameter of the can, mm
-can_diameter = 67;
+can_diameter = 75;
 
 // Height of the can, mm
 can_height = 123;
