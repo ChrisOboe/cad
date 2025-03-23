@@ -1,3 +1,7 @@
 use <../libraries/patterns/square.scad>
 
-cube_square([100, 200, 10], density = 6, border = 2);
+module dispenser(can_height = 109, can_width = 75, depth = 410) {
+  cube_square([100, 200, 10], density = 6, border = 2);
+}
+
+dispenser();
