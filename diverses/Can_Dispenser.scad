@@ -20,7 +20,7 @@ can_diameter = 75;
 can_height = 108.8;
 
 // How far from the edge should the can be supported, mm
-can_support_height = 30;
+can_support_height = 300;
 
 /* [Dispenser Dimensions] */
 // depth of dispenser, mm
