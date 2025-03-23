@@ -7,6 +7,8 @@ module can_inversion(diameter = 75, angle = 90, width = 2, height = 4) {
       cylinder(h = height + 2, d = diameter);
   }
 
+  cube([width,width,height])
+
 }
 
 module dispenser(can_height = 109, can_width = 75, depth = 410, angle = 5) {
