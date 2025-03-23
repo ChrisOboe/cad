@@ -1,4 +1,4 @@
-module cube_square(dimensions = [0, 0, 0], density = 3, border = 2) {
+module cube_square(dimensions = [0, 0, 0], density = 4, border = 2) {
   difference() {
     union() {
       square([dimensions.x, border]);
