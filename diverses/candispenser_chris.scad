@@ -8,7 +8,7 @@ module can_inversion(diameter = 75, angle = 90, width = 2, height = 4) {
   //}
 
   rotate_extrude(angle = angle, convexity = 2)
-    translate([diameter, 0, 0])
+    translate([10, 0, 0])
       square([width, height]);
 
 }
