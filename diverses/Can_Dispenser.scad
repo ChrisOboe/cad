@@ -30,7 +30,7 @@ depth = 341;
 height = 180;
 
 // how far from the front does the top shelf begin, mm
-shelf_y = 200;
+shelf_y = 100;
 
 // which object?
 part = "fullside"; // [fullside:Entire side piece, frontside:Front half of side, rearside:Rear half of side, supports, top, halftop:Half of top, topcutout:STL for slic3r to make top for full top mesh, halftopcutout:STL for top mesh for half top]
