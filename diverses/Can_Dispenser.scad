@@ -27,7 +27,7 @@ can_support_height = 30;
 depth = 341;
 
 // height of dispenser, mm
-height = 160;
+height = 180;
 
 // how far from the front does the top shelf begin, mm
 shelf_y = 100;
