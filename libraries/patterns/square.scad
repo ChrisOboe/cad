@@ -32,4 +32,4 @@ module cube_square(dimensions = [0, 0, 0], density = 6, border = 2) {
     }
 }
 
-cube_square([100, 200, 300]);
+cube_square([100, 200, 50]);
