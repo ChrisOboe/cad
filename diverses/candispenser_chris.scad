@@ -7,10 +7,9 @@ module can_inversion(diameter = 75, angle = 90, width = 2, height = 4) {
   //    cylinder(h = height + 2, d = diameter);
   //}
 
-  linear_extrude(height)
-    #rotate_extrude(angle = angle, convexity = 2)
-      translate([10, 0, 0])
-        square([width, width]);
+  rotate_extrude(angle = angle, convexity = 2)
+    translate([10, 0, 0])
+      square([width, width]);
 
 }
 
