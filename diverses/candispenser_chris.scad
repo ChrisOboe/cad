@@ -7,7 +7,7 @@ module can_inversion(diameter = 75, angle = 90, width = 2, height = 4) {
 
 }
 
-module dispenser(can_height = 109, can_width = 75, depth = 410, angle = 5, can_hold = 20) {
+module dispenser(can_height = 109, can_width = 75, depth = 410, angle = 5, can_hold = 30) {
   total_height = sin(angle) * depth * 2 + can_width;
   cube_square([total_height, depth, 10], density = 12, border = 2);
 
