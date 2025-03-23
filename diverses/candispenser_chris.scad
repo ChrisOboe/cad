@@ -28,6 +28,8 @@ module dispenser(can_height = 109, can_width = 75, depth = 410, angle = 5, can_h
     rotate([0, 0, 90])
       can_inversion(can_width, height = can_hold);
 
+  cube([10,20,30])
+
 }
 
 
