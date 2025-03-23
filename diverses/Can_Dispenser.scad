@@ -41,7 +41,7 @@ shelf_y = 100;
 //  halftop:Half of top,
 //  topcutout:STL for slic3r to make top for full top mesh,
 //  halftopcutout:STL for top mesh for half top]
-part = "topcutout";
+part = "frontside";
 
 /* [Rear Notch] */
 //notch out the bottom rear corner to avoid a rim on the fridge shelf?
