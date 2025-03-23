@@ -10,6 +10,9 @@ module dispenser(can_height = 109, can_width = 75, depth = 410) {
   #rotate([0, 0, -5])
     cube([2, depth, 20]);
 
+  #rotate([0, 0, 5])
+    cube([2, depth, 20]);
+
 }
 
 dispenser();
