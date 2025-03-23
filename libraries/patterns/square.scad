@@ -1,4 +1,4 @@
-module cube_square(dimensions = [0, 0, 0], density = 2, border = 2) {
+module cube_square(dimensions = [0, 0, 0], density = 100, border = 2) {
   square([dimensions.x, border]);
   translate([0, dimensions.y - border])
     square([dimensions.x, border]);
