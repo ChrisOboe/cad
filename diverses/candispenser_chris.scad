@@ -13,7 +13,7 @@ module dispenser(can_height = 109, can_width = 75, depth = 410) {
   height = sin(5) * (depth - can_width);
 
   #translate([height * 2 + can_width, 0, 0])
-    rotate([0, 0, 5])
+    rotate([0, 0, 0])
       cube([2, depth, 20]);
 
 }
