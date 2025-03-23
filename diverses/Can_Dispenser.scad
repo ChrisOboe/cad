@@ -17,7 +17,7 @@ with another set of supports.
 can_diameter = 75;
 
 // Height of the can, mm
-can_height = 108.8;
+can_height = 208.8;
 
 // How far from the edge should the can be supported, mm
 can_support_height = 30;
