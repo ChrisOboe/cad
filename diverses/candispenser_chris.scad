@@ -1,11 +1,11 @@
 use <../libraries/patterns/square.scad>
 
 module can_inversion(diameter = 75, angle = 90, width = 2, height = 4) {
-  difference() {
-    cylinder(h = height, d = diameter + 2 * width);
-    translate([0, 0, -1])
-      cylinder(h = height + 2, d = diameter);
-  }
+  //difference() {
+  //  cylinder(h = height, d = diameter + 2 * width);
+  //  translate([0, 0, -1])
+  //    cylinder(h = height + 2, d = diameter);
+  //}
 
   #rotate_extrude(angle = angle, convexity = 2)
     translate([10, 0, 0])
