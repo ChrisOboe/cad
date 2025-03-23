@@ -45,7 +45,7 @@ part = "fullside";
 
 /* [Rear Notch] */
 //notch out the bottom rear corner to avoid a rim on the fridge shelf?
-should_notch_rear = false;
+should_notch_rear = true;
 rear_notch_height = 33;
 rear_notch_depth = 9;
 
