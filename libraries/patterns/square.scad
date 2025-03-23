@@ -1,2 +1,2 @@
-module square(dimensions = [0, 0, 0], ) {
+module square(dimensions = [0, 0, 0]) {
 }
