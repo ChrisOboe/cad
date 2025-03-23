@@ -6,7 +6,7 @@ module cube_square(dimensions = [0, 0, 0], density = 40, border = 2) {
   translate([dimensions.x - border, 0])
     square([border, dimensions.y]);
 
-  length = sqrt((pow(dimensions.x,2)+pow(dimensions.y,2)))
+  length = sqrt((pow(dimensions.x, 2) + pow(dimensions.y, 2)));
   for(i = [0:density:dimensions.y]) {
     translate([0, i])
       rotate([0, 0, 45])
