@@ -27,5 +27,5 @@ module dispenser(can_height = 109, can_width = 75, depth = 410, angle = 5) {
 }
 
 
-can_inversion(diameter = can_width);
-//dispenser();
+//can_inversion(diameter = can_width);
+dispenser();
