@@ -1,7 +1,7 @@
 use <../libraries/patterns/square.scad>
 
-module can_inversion(diameter = 75, angle = 90) {
-  cylinder(h = 2, d = can_width + 2);
+module can_inversion(diameter = 75, angle = 90, width = 2, height = 4) {
+  cylinder(h = height, d = diameter + width);
 
 }
 
@@ -21,7 +21,6 @@ module dispenser(can_height = 109, can_width = 75, depth = 410, angle = 5) {
       cube([2, depth - can_width, 20]);
 
   can_inversion(can_width);
-
 
 }
 
