@@ -3,7 +3,8 @@ module cube_square(dimensions = [0, 0, 0], density = 10, border = 2) {
   translate([0, dimensions.y - border])
     square([dimensions.x, border]);
   square([border, dimensions.y]);
-  square([dimensions.x, border]);
+  translate([dismensions.x - border, 0])
+    square([dimensions.x, border]);
 }
 
 cube_square([100, 200, 300]);
