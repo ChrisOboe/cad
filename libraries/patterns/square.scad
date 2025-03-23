@@ -20,13 +20,13 @@ module cube_square(dimensions = [0, 0, 0], density = 40, border = 2) {
             square([length, border]);
       }
     }
-    #translate([-500, -1000])
+    translate([-500, -1000])
       square([1000, 1000]);
-    #translate([-1000, -500])
+    translate([-1000, -500])
       square([1000, 1000]);
-    #translate([dimensions.x, -500])
+    translate([dimensions.x, -500])
       square([1000, 1000]);
-    #translate([-500, dimensions.y])
+    translate([-500, dimensions.y])
       square([1000, 1000]);
 
   }
