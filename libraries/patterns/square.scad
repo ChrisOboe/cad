@@ -5,6 +5,9 @@ module cube_square(dimensions = [0, 0, 0], density = 10, border = 2) {
   square([border, dimensions.y]);
   translate([dimensions.x - border, 0])
     square([border, dimensions.y]);
+
+  for(i = [0:density:dimensions.y]) {
+  }
 }
 
 cube_square([100, 200, 300]);
