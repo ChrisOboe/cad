@@ -7,4 +7,4 @@ module square(dimensions = [0, 0, 0], density = 10, border = 2) {
     cube([border, dimensions.y, dimensions.z]);
 }
 
-square([100, 200, 300]);
+square([100, 200, 0]);
