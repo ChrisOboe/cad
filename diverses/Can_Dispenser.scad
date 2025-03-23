@@ -4,7 +4,11 @@ FourOhFour
 
 License: http://creativecommons.org/licenses/by-sa/4.0/
 
-A can dispenser for your fridge. Print two sides (mirror one in your slicer), one set of supports for the bottom, and a top shelf. Half sides and top provided if, like me, you don't have a large printer. If you aren't going to place items on top of the dispenser, you can save some plastic and replace the top shelf with another set of supports.
+A can dispenser for your fridge. Print two sides (mirror one in your slicer),
+one set of supports for the bottom, and a top shelf. Half sides and top provided
+if, like me, you don't have a large printer. If you aren't going to place items
+on top of the dispenser, you can save some plastic and replace the top shelf
+with another set of supports.
 
 */
 
