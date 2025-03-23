@@ -30,7 +30,7 @@ module dispenser(can_height = 109, can_width = 75, depth = 410, angle = 5, can_h
       can_inversion(can_width, height = can_hold);
 
   translate([0, depth - line_width, 0])
-    cube([10, line_width, can_hold]);
+    cube([20, line_width, can_hold]);
 
 }
 
