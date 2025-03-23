@@ -7,7 +7,7 @@ module can_inversion(diameter = 75, angle = 90, width = 2, height = 4) {
       cylinder(h = height + 2, d = diameter);
   }
 
-  cube([width,width,height])
+  cube([width, width, height]);
 
 }
 
