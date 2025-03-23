@@ -3,6 +3,7 @@ use <../libraries/patterns/square.scad>
 module can_inversion(diameter = 75, angle = 90, width = 2, height = 4) {
   difference() {
     cylinder(h = height, d = diameter + width);
+    cylinder(h = height, d = diameter);
   }
 
 }
