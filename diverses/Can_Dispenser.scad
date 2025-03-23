@@ -24,7 +24,7 @@ can_support_height = 30;
 
 /* [Dispenser Dimensions] */
 // depth of dispenser, mm
-depth = 341;
+depth = 500;
 
 // height of dispenser, mm
 height = 180;
