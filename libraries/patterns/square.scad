@@ -26,6 +26,8 @@ module cube_square(dimensions = [0, 0, 0], density = 40, border = 2) {
       square([1000, 1000]);
     #translate([dimensions.x, -500])
       square([1000, 1000]);
+    #translate([dimensions.x, dimensions.y])
+      square([1000, 1000]);
 
   }
 
