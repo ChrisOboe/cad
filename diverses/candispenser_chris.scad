@@ -29,7 +29,7 @@ module dispenser(can_height = 109, can_width = 75, depth = 410, angle = 5, can_h
     rotate([0, 0, 90])
       can_inversion(can_width, height = can_hold, width = line_width);
 
-  translate([height + can_height / 2 - 5, depth - line_width, 0])
+  translate([height + can_height / 2 + 5, depth - line_width, 0])
     cube([total_height - (height + can_height / 2) - 5, line_width, can_hold]);
 
 }
