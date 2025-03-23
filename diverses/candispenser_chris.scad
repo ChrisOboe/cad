@@ -1,6 +1,8 @@
 use <../libraries/patterns/square.scad>
 
+module can_inversion(diameter = 75, angle = 90) {
 
+}
 
 module dispenser(can_height = 109, can_width = 75, depth = 410, angle = 5) {
   total_height = sin(angle) * depth * 2 + can_width;
