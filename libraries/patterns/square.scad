@@ -13,7 +13,7 @@ module cube_square(dimensions = [0, 0, 0], density = 40, border = 2) {
         square([length, border]);
   }
   for(i = [0:density:dimensions.y]) {
-    translate([0, i + dimensions.x / 2])
+    translate([0, i + density])
       rotate([0, 0, -45])
         square([length, border]);
   }
