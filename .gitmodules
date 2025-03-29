@@ -4,3 +4,6 @@
 [submodule "libraries/BOSL2"]
 	path = libraries/BOSL2
 	url = https://github.com/BelfrySCAD/BOSL2
+[submodule "libraries/multiboard-parametric-stacked"]
+	path = libraries/multiboard-parametric-stacked
+	url = https://github.com/asciipip/multiboard-parametric-stacked
