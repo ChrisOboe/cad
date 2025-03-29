@@ -31,7 +31,7 @@ type = "core"; // side or corner
 // for printing with material changes, e.g. PLA and PETG:
 // either set a separation layer of one or more layer heights
 // or let the material alternate each tile, wit or without separation layer
-alternate_tile_material = true; // alternate material for each tile
+alternate_tile_material = false; // alternate material for each tile
 stack_separation_layer_thickness = 0.6; // thickness of separation layer between two tiles, 0 to disable
 
 render_odd_tiles = true; // render odd tiles
